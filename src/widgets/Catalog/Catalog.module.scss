@@ -1,0 +1,14 @@
+.catalog {
+  &__hero {
+    margin-top: -1px;
+    aspect-ratio: 375 / 400;
+    min-height: 400px;
+    width: 100%;
+    max-height: 100vh;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
