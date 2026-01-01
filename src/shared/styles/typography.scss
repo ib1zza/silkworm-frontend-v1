@@ -1,0 +1,23 @@
+@use "./mixins.scss" as *;
+@mixin h3($color: null) {
+  @if $color {
+    color: $color;
+  }
+
+  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 100%;
+  font-size: 14px;
+
+  @include mediaTablet {
+    font-size: 16px;
+  }
+
+  @include mediaLaptop {
+    font-size: 24px;
+  }
+
+  @include mediaDesktop {
+    font-size: 36px;
+  }
+}

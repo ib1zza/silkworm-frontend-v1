@@ -1,0 +1,46 @@
+@mixin grid($columns-count: 12) {
+  display: grid;
+  grid-template-columns: repeat($columns-count, 1fr);
+  column-gap: 12px;
+
+  @include mediaLaptop() {
+    column-gap: 20px;
+  }
+}
+
+$mobile: 375px;
+$tablet: 768px;
+$laptop: 1440px;
+$desktop: 1920px;
+
+@mixin mediaTablet() {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin mediaLaptop() {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin mediaDesktop() {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin wrapper() {
+  padding-inline: 12px;
+  max-width: 1920px;
+  margin-inline: auto;
+
+  @include mediaTablet() {
+    padding-inline: 20px;
+  }
+
+  @include mediaLaptop() {
+    padding-inline: 40px;
+  }
+}
