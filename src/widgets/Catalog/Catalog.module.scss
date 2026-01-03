@@ -19,13 +19,102 @@
       height: 100%;
     }
   }
+
+  &__content {
+    @include wrapper;
+  }
+
+  &__filters {
+    margin-block: 20px;
+
+    @include mediaLaptop {
+      @include grid;
+      margin-block: 48px;
+    }
+  }
+
+  &__search {
+    display: flex;
+    justify-content: center;
+    height: 36px;
+    border-block: 4px solid var(--black);
+
+    @include mediaLaptop {
+      grid-column: 9 / -1;
+      grid-row: 1;
+      height: 48px;
+    }
+
+    &__input {
+      flex-grow: 1;
+      padding-inline: 12px;
+      font-family: $fontMain;
+      font-size: 16px;
+
+      @include mediaLaptop {
+        font-size: 20px;
+      }
+
+      &::placeholder {
+        color: var(--text-placeholder);
+      }
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--black);
+      color: var(--white);
+      padding-inline: 6px;
+      padding-block: 2px;
+
+      @include mediaLaptop {
+        padding-block: 4px;
+        padding-inline: 8px;
+      }
+
+      svg {
+        height: 100%;
+        width: auto;
+      }
+    }
+  }
+
+  &__categories {
+    margin-block: 12px;
+    display: flex;
+    column-gap: 40px;
+    row-gap: 12px;
+    flex-wrap: wrap;
+
+    @include mediaLaptop {
+      grid-column: 1 / 9;
+      grid-row: 1;
+      margin-block: 0;
+    }
+  }
+
+  &__category {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--text-gray);
+
+    @include mediaLaptop {
+      font-size: 30px;
+    }
+
+    &_active {
+      color: var(--black);
+    }
+  }
 }
 
 .list {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 36px;
-  @include wrapper;
 
   @include mediaTablet {
     grid-template-columns: repeat(2, 1fr);
@@ -33,9 +122,20 @@
   }
 
   @include mediaLaptop {
+    grid-column: 1 / -1;
+  }
+
+  @include mediaLaptop {
     grid-template-columns: repeat(4, 1fr);
     row-gap: 20px;
   }
+}
+
+.empty {
+  @include h3;
+  text-align: center;
+  margin-block: 20px;
+  grid-column: 1/ -1;
 }
 
 .item {
