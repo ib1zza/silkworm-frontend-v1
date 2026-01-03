@@ -11,6 +11,7 @@ export default defineConfig({
       scss: {
         additionalData: `@use "@/shared/styles/vars" as *;
         @use "@/shared/styles/mixins" as *;
+        @use "@/shared/styles/fonts" as *;
         @use "@/shared/styles/typography" as *;
         `,
       },

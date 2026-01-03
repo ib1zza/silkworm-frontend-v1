@@ -1,0 +1,47 @@
+.header {
+  @include wrapper;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.links {
+  @include grid(4);
+}
+
+.link {
+  @include h3;
+  padding-block: 20px;
+  color: var(--white);
+  &.cart {
+    grid-column: -1;
+  }
+}
+
+.animation {
+  height: 370px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    width: auto;
+    height: 100%;
+
+    animation: anim 3s infinite linear;
+  }
+
+  // rotate animation for icon
+  @keyframes anim {
+    0% {
+      transform: rotateY(0deg);
+    }
+    100% {
+      transform: rotateY(360deg);
+    }
+  }
+}

@@ -1,0 +1,55 @@
+// fonts.scss
+@use "./vars.scss" as *;
+
+@font-face {
+  font-family: $fontMain;
+  src: url("../assets/fonts/ibm-plex-sans-mono-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $fontMain;
+  src: url("../assets/fonts/ibm-plex-sans-mono-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $fontMain;
+  src: url("../assets/fonts/ibm-plex-sans-mono-medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $fontMain;
+  src: url("../assets/fonts/ibm-plex-sans-mono-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Font mixins for easy usage
+@mixin font-regular {
+  font-family: $fontMain, monospace;
+  font-weight: 400;
+}
+
+@mixin font-light {
+  font-family: $fontMain, monospace;
+  font-weight: 300;
+}
+
+@mixin font-medium {
+  font-family: $fontMain, monospace;
+  font-weight: 500;
+}
+
+@mixin font-bold {
+  font-family: $fontMain, monospace;
+  font-weight: 700;
+}
