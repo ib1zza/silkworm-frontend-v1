@@ -1,0 +1,30 @@
+.preloader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo {
+  width: 270px;
+
+  animation: anim 3s infinite ease;
+
+  // rotate animation for icon
+  @keyframes anim {
+    0% {
+      transform: scale(0.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @include mediaLaptop {
+    width: 440px;
+  }
+
+  @include mediaDesktop {
+    width: 600px;
+  }
+}
