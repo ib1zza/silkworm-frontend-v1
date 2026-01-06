@@ -1,23 +1,48 @@
-.header {
+.footer {
   @include wrapper;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
 }
 
 .links {
   @include grid(4);
+
+  @include mediaLaptop {
+    @include grid(12);
+  }
 }
 
 .link {
+  grid-row: 1;
   @include h3;
-  padding-block: 20px;
-  color: var(--white);
-  &.cart {
-    grid-column: -1;
+  padding-block: 12px;
+
+  @include mediaLaptop {
+    padding-block: 25px;
+    grid-column: span 2;
+  }
+  color: var(--black);
+
+  &_right {
+    text-align: right;
+    grid-column: 3 / -1;
+
+    @include mediaLaptop {
+      grid-column: -4 / -1;
+    }
+  }
+}
+
+.copyright {
+  @include footnote;
+  text-align: center;
+
+  grid-column: 1 / -1;
+  margin-bottom: 12px;
+
+  @include mediaLaptop {
+    grid-column: 5 / -5;
+    grid-row: 1;
+    place-content: center;
+    margin-bottom: 0;
   }
 }
 
@@ -27,12 +52,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 50px;
 
   &__icon {
     width: auto;
     height: 100%;
 
-    animation: anim 3s infinite linear;
+    animation: anim 6s infinite linear;
   }
 
   // rotate animation for icon

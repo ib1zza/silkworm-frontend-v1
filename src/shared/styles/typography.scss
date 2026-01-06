@@ -1,11 +1,16 @@
 @use "./mixins.scss" as *;
+
+@mixin heading() {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
 @mixin h3($color: null) {
   @if $color {
     color: $color;
   }
 
-  text-transform: uppercase;
-  font-weight: 400;
+  @include heading;
   line-height: 100%;
   font-size: 14px;
 
@@ -19,5 +24,22 @@
 
   @include mediaDesktop {
     font-size: 36px;
+  }
+}
+
+@mixin footnote() {
+  font-size: 10px;
+  font-weight: 300;
+
+  @include mediaTablet {
+    font-size: 12px;
+  }
+
+  @include mediaLaptop {
+    font-size: 14px;
+  }
+
+  @include mediaDesktop {
+    font-size: 20px;
   }
 }
