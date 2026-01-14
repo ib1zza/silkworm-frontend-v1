@@ -1,10 +1,50 @@
 .page {
   display: flex;
   flex-direction: column;
+  padding-top: var(--header-height);
 }
 
 .hero {
-  height: 100vh;
-
+  height: calc(100vh - var(--header-height));
+  position: relative;
   background: black;
+  overflow: hidden;
+}
+
+.dvd {
+  position: absolute;
+  width: max(200px, 20vw);
+  pointer-events: auto;
+  cursor: pointer;
+
+  transform-style: preserve-3d;
+  perspective: 800px;
+
+  svg {
+    width: 100%;
+    height: auto;
+    fill: white;
+    filter: invert(1);
+    backface-visibility: hidden;
+  }
+}
+
+.flip {
+  svg {
+    animation: flipX 0.8s ease-in-out;
+  }
+}
+
+@keyframes flipX {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
