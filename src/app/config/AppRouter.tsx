@@ -1,5 +1,5 @@
 import React from "react";
-import { IndexPage } from "@/pages";
+import { IndexPage, ProductSlugPage } from "@/pages";
 import { Route, Routes } from "react-router";
 
 export default function AppRouter() {
@@ -7,6 +7,10 @@ export default function AppRouter() {
     {
       path: "/",
       element: <IndexPage />,
+    },
+    {
+      path: "/product/:slug",
+      element: <ProductSlugPage />,
     },
   ];
 

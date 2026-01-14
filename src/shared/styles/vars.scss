@@ -1,8 +1,20 @@
 $fontMain: "IBM Silkworm";
-
+@use "./mixins.scss" as *;
 :root {
   --white: #fff;
   --black: #000;
   --text-gray: #7b7974;
   --text-placeholder: #cccccc;
+  --gold: #c3a130;
+
+  --header-height: 54px;
+  @include mediaTablet {
+    --header-height: 56px;
+  }
+  @include mediaLaptop {
+    --header-height: 64px;
+  }
+  @include mediaDesktop {
+    --header-height: 76px;
+  }
 }

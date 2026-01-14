@@ -29,5 +29,5 @@
 
     "noUnusedLocals": false
   },
-  "include": ["src"]
+  "include": ["src", "orval.config.ts"]
 }
