@@ -36,9 +36,11 @@ export default function ProductSlugPage() {
 
   return (
     <div className={s.page}>
-      <div className={s.decoration}>
-        <img src={product.Decoration} alt="decoration" />
-      </div>
+      {product.Decoration && (
+        <div className={s.decoration}>
+          <img src={product.Decoration} alt="decoration" />
+        </div>
+      )}
       <div className={s.content}>
         <div className={s.main__image}>
           <img src={product?.Preview} alt="" />
@@ -83,7 +85,7 @@ export default function ProductSlugPage() {
         </div>
       </div>
 
-      {false && product.Images.length > 0 && (
+      {/* {product.Images.length > 0 && (
         <Swiper>
           {product.Images.map((image) => (
             <SwiperSlide key={image}>
@@ -91,7 +93,7 @@ export default function ProductSlugPage() {
             </SwiperSlide>
           ))}
         </Swiper>
-      )}
+      )} */}
     </div>
   );
 }
