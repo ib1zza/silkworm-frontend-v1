@@ -9,7 +9,7 @@ import clsx from 'clsx';
 import AddToCartIcon from '@/shared/assets/vector/add_to_cart.svg?react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import type { ProductVariantDto } from '@/api/generated/schemas/productVariantDto';
+import type { ProductVariantResponseDto } from '@/api/generated/schemas';
 
 export default function ProductSlugPage() {
   const { slug } = useParams();
@@ -22,7 +22,7 @@ export default function ProductSlugPage() {
     queryFn: () => api.getApiV1ProductsId(slug!),
   });
 
-  const [selectedVariant, setSelectedVariant] = useState<ProductVariantDto | null>(null);
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariantResponseDto | null>(null);
 
   useEffect(() => {
     if (product) setSelectedVariant(product.Variants[0]);
