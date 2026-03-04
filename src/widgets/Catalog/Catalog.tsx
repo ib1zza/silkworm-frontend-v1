@@ -54,7 +54,7 @@ export default function Catalog() {
       // Элемент подходит, если соответсвует обоим условиям
       return matchesSearch && matchesCategory;
     });
-  }, [search, selectedCategory, data.Items.length]); // Добавляем selectedCategory в зависимости
+  }, [search, selectedCategory, data.Items?.length]); // Добавляем selectedCategory в зависимости
 
   const handleSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
