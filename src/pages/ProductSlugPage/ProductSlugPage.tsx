@@ -4,15 +4,15 @@ import { useParams } from 'react-router';
 import { useQuery } from '@tanstack/react-query';
 import { api } from '@/api';
 import { useEffect, useState } from 'react';
-import type { ProductVariantDto } from '@/api/generated/schemas';
+
 import clsx from 'clsx';
 import AddToCartIcon from '@/shared/assets/vector/add_to_cart.svg?react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
+import type { ProductVariantDto } from '@/api/generated/schemas/productVariantDto';
 
 export default function ProductSlugPage() {
   const { slug } = useParams();
-
   const {
     data: product,
     isLoading,
