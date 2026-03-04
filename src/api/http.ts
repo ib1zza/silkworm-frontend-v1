@@ -1,12 +1,12 @@
-import axios, { AxiosError, type AxiosRequestConfig } from "axios";
+import axios, { AxiosError, type AxiosRequestConfig } from 'axios';
 
 export const http = axios.create({
-  baseURL: "https://digital-twilight.ru",
+  baseURL: 'https://digital-twilight.ru',
 });
 
 export const customInstance = <T>(
   config: AxiosRequestConfig,
-  options?: AxiosRequestConfig
+  options?: AxiosRequestConfig,
 ): Promise<T> => {
   const promise = http({
     ...config,
@@ -27,5 +27,5 @@ http.interceptors.response.use(
   (err) => {
     // глобальная обработка ошибок
     return Promise.reject(err);
-  }
+  },
 );

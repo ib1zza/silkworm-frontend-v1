@@ -1,16 +1,21 @@
-import React from "react";
-import { IndexPage, ProductSlugPage } from "@/pages";
-import { Route, Routes } from "react-router";
+import React from 'react';
+import { IndexPage, ProductSlugPage } from '@/pages';
+import { Route, Routes } from 'react-router';
+import { GalleryPage } from '@/pages/GalleryPage';
 
 export default function AppRouter() {
   const routes = [
     {
-      path: "/",
+      path: '/',
       element: <IndexPage />,
     },
     {
-      path: "/product/:slug",
+      path: '/product/:slug',
       element: <ProductSlugPage />,
+    },
+    {
+      path: '/gallery',
+      element: <GalleryPage />,
     },
   ];
 

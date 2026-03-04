@@ -1,6 +1,6 @@
 // Preloader.tsx
-import s from "./Preloader.module.scss";
-import LogoIcon from "@/shared/assets/vector/preloader.svg?react";
+import s from './Preloader.module.scss';
+import LogoIcon from '@/shared/assets/vector/preloader.svg?react';
 
 export const Preloader = () => (
   <div className={s.preloader}>

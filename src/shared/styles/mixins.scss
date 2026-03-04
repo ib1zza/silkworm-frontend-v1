@@ -3,7 +3,7 @@
   grid-template-columns: repeat($columns-count, 1fr);
   column-gap: 12px;
 
-  @include mediaLaptop() {
+  @include mediaLaptop {
     column-gap: 20px;
   }
 }
@@ -36,11 +36,11 @@ $desktop: 1920px;
   max-width: 1920px;
   margin-inline: auto;
 
-  @include mediaTablet() {
+  @include mediaTablet {
     padding-inline: 20px;
   }
 
-  @include mediaLaptop() {
+  @include mediaLaptop {
     padding-inline: 40px;
   }
 }

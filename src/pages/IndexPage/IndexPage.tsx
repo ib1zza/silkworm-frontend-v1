@@ -1,7 +1,7 @@
-import { useEffect, useRef } from "react";
-import s from "./IndexPage.module.scss";
-import LogoIcon from "@/shared/assets/vector/preloader.svg?react";
-import { Catalog } from "@/widgets/Catalog";
+import { useEffect, useRef } from 'react';
+import s from './IndexPage.module.scss';
+import LogoIcon from '@/shared/assets/vector/preloader.svg?react';
+import { Catalog } from '@/widgets/Catalog';
 
 export default function IndexPage() {
   const dvdRef = useRef<HTMLDivElement>(null);

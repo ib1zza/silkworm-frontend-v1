@@ -4,7 +4,6 @@
   left: 0;
   right: 0;
   z-index: 10;
-
   background: var(--black);
   height: 54px;
 
@@ -19,19 +18,29 @@
   @include mediaDesktop {
     height: 76px;
   }
+
+  &_white {
+    background: var(--white);
+
+    .link {
+      color: var(--black);
+    }
+  }
 }
 
 .links {
   @include wrapper;
-
   @include grid(4);
 }
 
 .link {
   @include h3;
+
   padding-block: 20px;
   color: var(--white);
+
   &.cart {
-    grid-column: -1;
+    grid-column: -2 / -1;
+    justify-self: flex-end;
   }
 }

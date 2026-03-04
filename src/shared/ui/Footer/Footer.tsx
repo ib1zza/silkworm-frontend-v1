@@ -1,9 +1,9 @@
-import React from "react";
-import s from "./Footer.module.scss";
-import { Link } from "react-router";
-import clsx from "clsx";
+import React from 'react';
+import s from './Footer.module.scss';
+import { Link } from 'react-router';
+import clsx from 'clsx';
 
-import AnimIcon from "@/shared/assets/vector/footerAnim.svg?react";
+import AnimIcon from '@/shared/assets/vector/footerAnim.svg?react';
 
 export default function Footer() {
   return (

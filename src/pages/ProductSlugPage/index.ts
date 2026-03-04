@@ -1,3 +1,3 @@
-import ProductSlugPage from "./ProductSlugPage";
+import ProductSlugPage from './ProductSlugPage';
 
 export { ProductSlugPage };

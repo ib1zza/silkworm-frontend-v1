@@ -1,14 +1,14 @@
-import { formatPriceToRUB } from "@/shared/utils";
-import s from "./ProductSlugPage.module.scss";
-import { useParams } from "react-router";
-import { useQuery } from "@tanstack/react-query";
-import { api } from "@/api";
-import { useEffect, useState } from "react";
-import type { ProductVariantDto } from "@/api/generated/schemas";
-import clsx from "clsx";
-import AddToCartIcon from "@/shared/assets/vector/add_to_cart.svg?react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import { formatPriceToRUB } from '@/shared/utils';
+import s from './ProductSlugPage.module.scss';
+import { useParams } from 'react-router';
+import { useQuery } from '@tanstack/react-query';
+import { api } from '@/api';
+import { useEffect, useState } from 'react';
+import type { ProductVariantDto } from '@/api/generated/schemas';
+import clsx from 'clsx';
+import AddToCartIcon from '@/shared/assets/vector/add_to_cart.svg?react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 export default function ProductSlugPage() {
   const { slug } = useParams();
@@ -18,12 +18,11 @@ export default function ProductSlugPage() {
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["product", slug],
+    queryKey: ['product', slug],
     queryFn: () => api.getApiV1ProductsId(slug!),
   });
 
-  const [selectedVariant, setSelectedVariant] =
-    useState<ProductVariantDto | null>(null);
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariantDto | null>(null);
 
   useEffect(() => {
     if (product) setSelectedVariant(product.Variants[0]);
@@ -48,12 +47,8 @@ export default function ProductSlugPage() {
 
         <div className={s.main__info}>
           <div className={s.main__price}>
-            <span className={s.main__price_prev}>
-              {formatPriceToRUB(product.Price + 200)}
-            </span>
-            <span className={s.main__price_current}>
-              {formatPriceToRUB(product.Price)}
-            </span>
+            <span className={s.main__price_prev}>{formatPriceToRUB(product.Price + 200)}</span>
+            <span className={s.main__price_current}>{formatPriceToRUB(product.Price)}</span>
           </div>
 
           <p className={s.main__description}>{product.Description}</p>

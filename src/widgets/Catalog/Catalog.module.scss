@@ -29,6 +29,7 @@
 
     @include mediaLaptop {
       @include grid;
+
       margin-block: 48px;
     }
   }
@@ -84,8 +85,7 @@
   &__categories {
     margin-block: 12px;
     display: flex;
-    column-gap: 40px;
-    row-gap: 12px;
+    gap: 12px 40px;
     flex-wrap: wrap;
 
     @include mediaLaptop {
@@ -133,6 +133,7 @@
 
 .empty {
   @include h3;
+
   text-align: center;
   margin-block: 20px;
   grid-column: 1/ -1;
@@ -146,6 +147,7 @@
   @include mediaDesktop {
     gap: 10px;
   }
+
   &__image {
     aspect-ratio: 1;
     width: 100%;

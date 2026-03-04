@@ -20,16 +20,18 @@
 body {
   /* 4. Add accessible line-height */
   line-height: 1;
+
   /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
+
 /* 6. Improve media defaults */
 img,
 picture,
@@ -71,6 +73,7 @@ h6 {
 p {
   text-wrap: pretty;
 }
+
 h1,
 h2,
 h3,

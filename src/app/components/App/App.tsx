@@ -1,7 +1,7 @@
-import { Suspense, useEffect, useState } from "react";
-import "./App.scss";
-import AppRouter from "@/app/config/AppRouter";
-import { Header, Footer, Preloader } from "@/shared/ui";
+import { Suspense, useEffect, useState } from 'react';
+import './App.scss';
+import AppRouter from '@/app/config/AppRouter';
+import { Header, Footer, Preloader } from '@/shared/ui';
 
 function App() {
   const [isReady, setIsReady] = useState(false);
@@ -21,11 +21,11 @@ function App() {
       }, remaining);
     };
 
-    if (document.readyState === "complete") {
+    if (document.readyState === 'complete') {
       handleLoad();
     } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
+      window.addEventListener('load', handleLoad);
+      return () => window.removeEventListener('load', handleLoad);
     }
   }, []);
 
@@ -33,7 +33,7 @@ function App() {
     <>
       {!isReady && <Preloader />}
 
-      <div style={{ opacity: isReady ? 1 : 0, transition: "opacity 0.3s" }}>
+      <div style={{ opacity: isReady ? 1 : 0, transition: 'opacity 0.3s' }}>
         <Header />
 
         {/* Suspense handles the lazy loading of chunks inside the router */}
